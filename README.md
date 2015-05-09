@@ -4,7 +4,7 @@
 
 1. [QAV 250 G10 frame](http://www.getfpv.com/multi-rotor-frames/mini-multi-rotor-store/mini-multi-rotors/qav250-mini-fpv-quadcopter.html)
 
-2. [Naze 32 flight controller](http://www.getfpv.com/flight-controllers/acro-naze32-flight-controller-straight-right-angle.html)
+2. [Naze 32 acro flight controller](http://www.getfpv.com/flight-controllers/acro-naze32-flight-controller-straight-right-angle.html)
 
 3. [FrSky Taranis Radio and X8R receiver](http://www.getfpv.com/radios/radio-controllers/frsky-taranis-x9d-plus-2-4ghz-accst-radio-x8r-combo-w-case-mode-2.html)
 
@@ -24,17 +24,19 @@
 
 ## Configuration software
 
-* [Naze 32](https://chrome.google.com/webstore/detail/baseflight-configurator/mppkgnedeapfejgfimkdoninnofofigk?hl=en)
+* [Naze 32 Baseflight](https://chrome.google.com/webstore/detail/baseflight-configurator/mppkgnedeapfejgfimkdoninnofofigk?hl=en)
+
+* [Naze 32 Cleanflight](https://chrome.google.com/webstore/detail/cleanflight-configurator/enacoimjcgeinfnnnpajinjgmkahmfgb?hl=en)  - clean flight is recommended
 
 ## Build steps
 
 Follow the QAV 250 G10
 [manual](http://www.lumenier.com/products/multirotors/qav250/build-manual)
-
 for steps 1 - 3
 
 1. Solder the underframe LEDs to the power distribution board
 
+   Solder: 62/36/2 (60/40) silver rosin core electrical solder
    24 gauge flexible wire
 
    [LED connection](https://youtu.be/OHPvexW6zpg?t=357)
@@ -48,8 +50,6 @@ for steps 1 - 3
    https://youtu.be/OHPvexW6zpg?t=453
 
 3. Solder the ESCs to the power distribution board
-
-   Solder: 62/36/2 silver rosin core electrical solder
 
    Pretin PDB and ESC leads
 
@@ -71,6 +71,8 @@ for steps 1 - 3
 
 10. Solder header pins for receiver channels on NAZE 32
 
+    [Soldering the NAZE 32](http://www.frsky-rc.com/product/pro.php?pro_id=105)
+
 11. Solder power and gnd header to Naze 32
 
 12. Attach ESC and power and gnd underneath NAZE board
@@ -78,6 +80,8 @@ for steps 1 - 3
     https://youtu.be/OHPvexW6zpg?t=735
 
 13. Solder wires from channels 1-4 (6?) from X8R to NAZE 32 board
+
+    Use breakout cable as holder so that plastic doesn't melt and pins fall out
 
 14. Attach Naze 32 to stand offs on drone (near center of gravity)
 
@@ -100,6 +104,8 @@ for steps 1 - 3
 
 18. Mount the motors to the frame using lock tite for screws
 
+    Don't attach propellers while working on the quad
+
 19. Solder the motors to the ESCs making sure that two motors turn clockwise and two turn counter clockwise.
 
     [Directions picture](https://youtu.be/OHPvexW6zpg?t=2010)
@@ -116,12 +122,18 @@ for steps 1 - 3
 
     Connect NAZE 32 to USB
 
+    [Flashing firmware](https://youtu.be/l1GWtlRk45Q?t=565)
+
     [Configuration](https://youtu.be/OHPvexW6zpg?t=1335)
+
+    Setup (calibrate accelorameter)
+    Configuration (Quad X)
+    Receiver
 
 21. Verify NAZE is in proper configuration by moving drone and watching movement
     on configuration display
 
-21. Get ready to power on drone and test motor/NAZE configuration
+22. Get ready to power on drone and test motor/NAZE configuration
 
     Go to motor testing tab
 
@@ -131,15 +143,35 @@ for steps 1 - 3
 
     Look for shorts, disconnect if any magic smoke
 
-22. Check motors and directions and reverse direction if necessary
+22. Check motors and directions (by putting a piece of masking tape on motor) and reverse direction if necessary
 
-23. Continue on to FPV. Solder connection from PDB to Immersion RC receiver
+23. Calibrate ESC
 
-24. Cut camera down to fit into drone
+    https://youtu.be/l1GWtlRk45Q?t=1619
 
-25. Solder connection between camera and Immersion RC
+24. Set up arming on receiver
 
-26. Set failsafes on NAZE to off
+25. Set up 3 position switch for different flight modes
 
-27. Attach props (making sure that props are in correct direction). CW props on CW motors
+    * Auto level
+    * Horizon
+    * Angle
+26. Goto receiver tabs
+
+    verify receiver is setup correctly. Manually trim and set center for each channel
+
+26. Continue on to FPV. Solder connection from PDB to Immersion RC receiver
+
+27. Cut camera down to fit into drone
+
+28. Solder connection between camera and Immersion RC
+
+29. Set failsafes on NAZE to off
+
+30. Attach props (making sure that props are in correct direction). CW props on CW motors
     5 X 3  and  5 x 3 R for different rotations?
+
+
+## Questions:
+
+PWM/PPM? on the receiver
