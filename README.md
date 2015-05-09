@@ -20,7 +20,7 @@
 
 * [Naze 32](http://www.abusemark.com/downloads/naze32_rev3.pdf)
 * [Super 600 camera](http://www.getfpv.com/media/manuals/2040_osd_menu_manual.pdf)
-* [X8R receiver]
+* [X8R receiver](http://www.frsky-rc.com/product/pro.php?pro_id=105)
 
 ## Configuration software
 
@@ -79,7 +79,7 @@ for steps 1 - 3
 
 13. Solder wires from channels 1-4 (6?) from X8R to NAZE 32 board
 
-14. Attach Naze 32 to stand offs on drone
+14. Attach Naze 32 to stand offs on drone (near center of gravity)
 
 
 15. [Use the self-tapping screws to attach the LEDs to the underside of the frame](https://youtu.be/OHPvexW6zpg?t=993)
